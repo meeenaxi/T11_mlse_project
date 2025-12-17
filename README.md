@@ -20,24 +20,39 @@ The core motivation is to move beyond generic vision–language models and build
 ### 2. Dataset Description
 2.1 Aircraft Image Dataset
 
-The project is built around a military aircraft image dataset, which contains labeled images of multiple military aircraft classes.
+The project is built around a military aircraft image dataset containing labeled images of multiple military aircraft classes. The dataset spans a diverse set of aircraft categories, including fighter aircraft, bombers, transport aircraft, and unmanned aerial vehicles (UAVs).
 
-Key characteristics of the image dataset:
+Key characteristics of the image dataset include:
 
-Multiple aircraft categories (fighters, bombers, transports, UAVs). Variability in viewpoints, lighting, and backgrounds. Strong inter-class visual similarity, making the task non-trivial. These images form the visual modality of the system and are used for both retrieval and generation tasks.
+Coverage of multiple aircraft categories
+
+Variability in viewing angles, lighting conditions, and background environments
+
+Strong inter-class visual similarity, making aircraft discrimination a non-trivial task
+
+These images constitute the visual modality of the system and are used for both retrieval and generation tasks within the multimodal RAG pipeline.
 
 2.2 Aircraft Knowledge Corpus
 
-The file aircraft_descriptions.json serves as the authoritative textual knowledge base for the RAG pipeline aircraft_descriptions
-Each entry:
-Maps an aircraft identifier (e.g., F-16, B-2, SR-71)
-To a highly structured, technical description covering:
+The file aircraft_descriptions.json serves as the authoritative textual knowledge base for the Retrieval-Augmented Generation (RAG) pipeline.
+
+Each entry in the corpus:
+
+Maps a specific aircraft identifier (e.g., F-16, B-2, SR-71)
+
+To a structured, technical description detailing:
+
 Engine configuration and placement
+
 Wing geometry and sweep
+
 Tail and stabilizer design
-Fuselage shape and distinctive features
+
+Fuselage shape and distinguishing features
+
 Landing gear configuration
-This dataset is not merely descriptive; it functions as the retrieval corpus that grounds all generated outputs.
+
+This dataset functions as the retrieval corpus for the RAG system, grounding both image-to-text and text-to-image generation in accurate, aircraft-specific domain knowledge.
 
 ### 3. Why Retrieval-Augmented Generation (RAG)
 
